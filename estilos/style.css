@@ -19,6 +19,7 @@ body, html{
 }
 
 main{
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
@@ -31,8 +32,8 @@ section#login{
     overflow: hidden;
 
     background-color: white;
-    width: 255px;
-    height: 500px;
+    width: 250px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
@@ -45,7 +46,6 @@ section#login > div#imagem{
     background: #5f2c82 url(../imagens/tela-fundo.jpg) no-repeat;
     height: 200px;
     background-size: cover;
-    background-attachment: fixed;
     background-position: center center;
 }
 
@@ -64,12 +64,13 @@ div#formulario > p{
     font-size: 0.8em;
     text-indent: 10px;
     text-align: justify;
-    padding-bottom: 20px;
 }
 
 form > div.campo{
     background-color: #5f2c82;
     display: block;
+    border: 2px solid #5f2c82;
+    width: 100%;
     height: 40px;
     border-radius: 8px;
     margin: 5px 0px;
@@ -81,31 +82,33 @@ div.campo > label{
 
 div.campo > span{
     color: white;
-    font-size: 2em;
+    font-size: 1.9em;
     width: 40px;
     padding: 5px;
-    background-color: black;
 }
 
 div.campo > input{
-    position: relative;
-   
-    top: -25.5%;
+    
     background-color: rgb(140, 253, 143);
     font-size: 1em;
-    width: calc(100% - 50px);
+    width: calc(100% - 45px);
+    transform: translateY(-10.3px);
     height: 100%; 
     border: 0px;
     border-radius: 8px;
     padding: 4px;
 }
 
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
+}
+
 form > input[type=submit]{
     display: block;
     font-size: 1em;
-    width: 80%;
-    position: relative;
-    left: 10%;
+    height: 40px;
+    width: 100%;
     margin-top: 10px;
     border: none; 
     border-radius: 5px;
@@ -122,9 +125,10 @@ form > a.botao{
     display: block;
     text-align: center;
     font-size: .8em;
+    width: 100%;
     height: 40px;
     margin-top: 5px;
-    padding-top: 10px;
+    padding-top: 5px;
     text-decoration: none;
 }
 
@@ -133,5 +137,5 @@ form > a.botao:hover{
 }
 
 form > a.botao > span{
-    font-size: 1.2em;
+    font-size: .8em;
 }
